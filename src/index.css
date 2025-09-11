@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-800 dark:text-gray-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+.hoverRead:hover .hoverP { 
+  color: #dc3545; 
+  transition: all;
+}
+
+
+.hoverRead:hover .hoverborder { 
+ 
+  border: 1px solid #dc3545;
+  border-radius: 100%;
+ }
+
+.hoverRead:hover .hovercolor { 
+ 
+  border: 6px solid #fff;
+  border-radius: 100%;
+ }
+
+
+
+
+.hoverRead:hover .hoverFaUsers { 
+  color: #FFF;
+  transition: all;
+}
+
+
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 relative inline-block;
+  }
+
+  .section-title::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-blue-500 rounded-full transform translate-y-2;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900 focus:ring-blue-500;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+}
+
+.project-card-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+/* For webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-400 dark:bg-blue-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-500 dark:bg-blue-700;
+}
