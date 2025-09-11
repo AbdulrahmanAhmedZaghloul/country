@@ -93,7 +93,7 @@ export default function Home({ setSelectedCountry }) {
                 onClick={() => setIsModalOpen(true)}
               />
 
-              <strong className="absolute top-8 text-white bg-[#40407e] p-4 py-1 rounded-l-none rounded-sm tracking-[0.1rem] left-0">
+              <strong className="absolute top-2 text-white bg-[#40407e] p-4 py-1 rounded-l-none rounded-sm tracking-[0.1rem] left-0">
                 World wide
               </strong>
             </div>
@@ -119,13 +119,13 @@ export default function Home({ setSelectedCountry }) {
                 <option value="" disabled>
                   Select a Country
                 </option>
-                {countries.map((country) => (
+                {countries?.map((country) => (
                   <option
                     className="bg-slate-900 text-white"
-                    key={country.code}
-                    value={country.code}
+                    key={country?.code}
+                    value={country?.code}
                   >
-                    {country.name}
+                    {country?.name}
                   </option>
                 ))}
               </select>
