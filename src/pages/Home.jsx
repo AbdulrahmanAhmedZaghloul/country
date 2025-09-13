@@ -6,6 +6,7 @@ import url2 from "../assets/slide2.jpg";
 import url3 from "../assets/slide3.jpg";
 import world from "../assets/world.jpg";
 import playicon from "../assets/playicon.png";
+import axiosInstance from "../api/config";
 
 export default function Home({ setSelectedCountry }) {
   const slides = [
@@ -21,7 +22,7 @@ export default function Home({ setSelectedCountry }) {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const { data } = await axios.get(
+        const { data } = await axiosInstance.get(
           "https://restcountries.com/v3.1/all?fields=name,cca2"
         );
         console.log(data);

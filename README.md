@@ -64,11 +64,11 @@ npm run preview
 
 ## Axios Usage Examples
 ```js
-import axios from "axios";
+import axiosInstance from "../api/config";
 
 // REST Countries sample
-const { data } = await axios.get(
-  "https://restcountries.com/v3.1/all?fields=name,cca2"
+const { data } = await axiosInstance.get(
+  "all?fields=name,cca2"
 );
 
 // WorldNews sample
@@ -78,6 +78,17 @@ const { data: newsData } = await axios.get(
 );
 ```
 
+## NotesApi 
+// src api 
+file config.js 
+
+import axios from "axios";
+
+const Url = 'https://restcountries.com/v3.1/';
+ 
+const axiosInstance = axios.create({
+  baseURL: Url,
+});
 ## Notes
 - Place slider images in `src/assets/slide1.jpg`, `slide2.jpg`, `slide3.jpg`.
 - The `DetailsCountry` section uses a background image from `src/assets/factsbg2.jpg`.
