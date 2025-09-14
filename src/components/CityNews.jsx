@@ -23,8 +23,7 @@ export default function CityNews({ country }) {
           params: {
             'api-key': API_KEY,
             'source-countries': country.toUpperCase(),
-            number: 4,
-          },
+           },
           withCredentials: false,
         });
         console.log(data);
